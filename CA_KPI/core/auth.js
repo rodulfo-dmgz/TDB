@@ -14,53 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const supabase = createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
 
-  // ─── Normalisation de la civilité ────────────────────────────────────────
-  // Uniformise toutes les variantes vers les valeurs acceptées par la BDD
-  function normaliseCivilite(valeur) {
-    const v = (valeur || '').trim();
-    if (['M', 'M.', 'Mr', 'Mr.', 'H'].includes(v)) return 'M.';
-    if (['Mme', 'F', 'Mlle', 'Madame', 'Mademoiselle'].includes(v)) return 'Mme';
-    return v; // fallback : renvoie tel quel
-  }
-
-  // ─── Affichage structuré des erreurs Supabase ─────────────────────────────
-  function afficherErreur(error) {
-    console.error('Erreur Supabase complète :', error);
-
-    let detail = '';
-    if (error?.message) detail = error.message;
-    else if (error?.error_description) detail = error.error_description;
-    else detail = JSON.stringify(error);
-
-    // Aide contextuelle selon le type d'erreur
-    let aide = '';
-    if (detail.includes('check') || detail.includes('constraint')) {
-      aide = '👉 La valeur de la civilité est rejetée par une contrainte CHECK dans Supabase. Vérifiez les valeurs autorisées pour la colonne <code>civilite</code>.';
-    } else if (detail.includes('permission') || detail.includes('policy') || detail.includes('RLS') || detail.includes('row-level')) {
-      aide = '👉 Une politique RLS bloque l\'opération. Activez une policy INSERT publique sur la table <code>cours_kpi_users</code> dans Supabase → Authentication → Policies.';
-    } else if (detail.includes('null') || detail.includes('not-null')) {
-      aide = '👉 Un champ obligatoire est manquant ou null. Vérifiez les colonnes NOT NULL de votre table.';
-    } else if (detail.includes('duplicate') || detail.includes('unique')) {
-      aide = '👉 Un enregistrement avec ces données existe déjà (contrainte UNIQUE).';
-    }
-
-    messageContainer.innerHTML = `
-      <div class="alert-box" style="color: var(--danger); line-height:1.6;">
-        ❌ <strong>Erreur Supabase :</strong> ${detail}
-        ${aide ? `<br><br>${aide}` : ''}
-      </div>`;
-  }
-
   // ─── Soumission du formulaire ─────────────────────────────────────────────
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     messageContainer.innerHTML = '';
 
-    const civiliteRaw = document.getElementById('civilite').value;
-    const civilite    = normaliseCivilite(civiliteRaw);
-    const nom         = document.getElementById('nom').value.trim();
-    const prenom      = document.getElementById('prenom').value.trim();
-    const email       = document.getElementById('email').value.trim();
+    const civilite = document.getElementById('civilite').value;       // 'M' ou 'F'
+    const nom      = document.getElementById('nom').value.trim();
+    const prenom   = document.getElementById('prenom').value.trim();
+    const email    = document.getElementById('email').value.trim();
 
     // Validation basique
     if (!nom || !prenom || !email) {
@@ -68,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         '<div class="alert-box" style="color: var(--danger);">Tous les champs sont requis.</div>';
       return;
     }
-
-    // Log de debug (à retirer en production)
-    console.log('Données envoyées :', { civilite, nom, prenom, email });
 
     try {
       // Vérifier si l'utilisateur existe déjà
@@ -106,7 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
     } catch (error) {
-      afficherErreur(error);
+      console.error('Erreur Supabase:', error);
+      messageContainer.innerHTML = `
+        <div class="alert-box" style="color: var(--danger); line-height:1.6;">
+          ❌ <strong>Erreur :</strong> ${error?.message || JSON.stringify(error)}
+        </div>`;
     }
   });
 });
