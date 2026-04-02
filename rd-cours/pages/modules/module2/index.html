@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 — Clients (CP1) — RD COURS COMPTA</title>
+    <link rel="icon" type="image/svg+xml" href="../../../assets/icons/icon.svg">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__header"><img src="../../../assets/images/logo.svg" alt="" class="sidebar__logo" /><div class="sidebar__brand">RD COURS<br><small>RD FORMATION COMPTABILITE</small></div></div>
+            <nav class="sidebar__nav">
+                <span class="sidebar__section-label">Navigation</span>
+                <a href="../../../dashboard.html" class="nav-item"><i data-lucide="layout-dashboard"></i><span>Tableau de bord</span></a>
+                <span class="sidebar__section-label">Modules</span>
+                <a href="../../../pages/modules/module1/index.html" class="nav-item"><i data-lucide="book-open"></i><span>M1 — Fondamentaux</span></a>
+                <a href="../../../pages/modules/module2/index.html" class="nav-item nav-item--active"><i data-lucide="users"></i><span>M2 — Clients</span></a>
+                <a href="../../../pages/modules/module3/index.html" class="nav-item"><i data-lucide="truck"></i><span>M3 — Fournisseurs</span></a>
+                <a href="../../../pages/modules/module4/index.html" class="nav-item"><i data-lucide="landmark"></i><span>M4 — Trésorerie</span></a>
+                
+                <span class="sidebar__section-label" id="adminSectionLabel" style="display:none;">Administration</span>
+                <a href="../../../pages/admin/index.html" class="nav-item" id="adminNavItem" style="display:none;"><i data-lucide="shield-check"></i><span>Gestion stagiaires</span></a>
+            </nav>
+            <div class="sidebar__footer"><div class="sidebar__user"><div class="sidebar__avatar" id="userAvatar">?</div><div class="sidebar__user-info"><div class="sidebar__user-name" id="userName">...</div><div class="sidebar__user-role" id="userRole">—</div></div><button class="btn-icon btn-ghost" id="logoutBtn" aria-label="Déconnexion"><i data-lucide="log-out"></i></button></div></div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <header class="topbar">
+            <div class="topbar__left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i data-lucide="menu"></i></button>
+                <nav class="topbar__breadcrumb"><a href="../../../dashboard.html">Tableau de bord</a><span class="topbar__breadcrumb-sep"><i data-lucide="chevron-right" style="width:14px;height:14px;"></i></span><span class="topbar__breadcrumb-current">Module 2</span></nav>
+            </div>
+            <div class="topbar__right"><button type="button" class="theme-toggle" id="themeToggle" aria-label="Changer de thème"><i data-lucide="sun"></i></button></div>
+        </header>
+        <main class="content">
+            <div class="module-header animate-fade-up">
+                <div class="module-header__top">
+                    <span class="module-header__badge">MODULE 02</span>
+                    <span class="module-header__duration"><i data-lucide="clock"></i> 8h de formation</span>
+                </div>
+                <h1 class="module-header__title">Gestion Administrative et Comptable des Clients (CP 1)</h1>
+                <p class="module-header__objective">Assurer la gestion administrative et comptable des clients.</p>
+                <div class="module-header__progress">
+                    <div class="progress-bar" style="flex:1;"><div class="progress-bar__fill progress-bar__fill--cta" style="width:0%;"></div></div>
+                    <span class="module-header__progress-label">0 / 3 séquences</span>
+                </div>
+            </div>
+            <div class="section-header"><h2 class="section-header__title">Séquences</h2><span class="section-header__label">3 séquences</span></div>
+            <div class="sequences-list">
+                    <a href="seq1.html" class="sequence-card animate-fade-up delay-1">
+                        <div class="sequence-card__step">1</div>
+                        <div class="sequence-card__info"><div class="sequence-card__title">De l'émission à l'enregistrement</div><div class="sequence-card__status">Non commencé</div></div>
+                        <div class="sequence-card__arrow"><i data-lucide="chevron-right"></i></div>
+                    </a>
+                    <a href="seq2.html" class="sequence-card animate-fade-up delay-2">
+                        <div class="sequence-card__step">2</div>
+                        <div class="sequence-card__info"><div class="sequence-card__title">Suivi et relance</div><div class="sequence-card__status">Non commencé</div></div>
+                        <div class="sequence-card__arrow"><i data-lucide="chevron-right"></i></div>
+                    </a>
+                    <a href="seq3.html" class="sequence-card animate-fade-up delay-3">
+                        <div class="sequence-card__step">3</div>
+                        <div class="sequence-card__info"><div class="sequence-card__title">Le rapprochement (lettrage)</div><div class="sequence-card__status">Non commencé</div></div>
+                        <div class="sequence-card__arrow"><i data-lucide="chevron-right"></i></div>
+                    </a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../../../env.js"></script>
+    <script src="../../../core/theme/theme.js"></script>
+    <script type="module" src="module.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

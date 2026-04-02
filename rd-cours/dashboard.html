@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord — RD COURS COMPTA</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="app-shell" id="appShell">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__header">
+                <img src="assets/images/logo.svg" alt="" class="sidebar__logo" />
+                <div class="sidebar__brand">RD COURS<br><small>RD FORMATION COMPTABILITE</small></div>
+            </div>
+            <nav class="sidebar__nav">
+                <span class="sidebar__section-label">Navigation</span>
+                <a href="dashboard.html" class="nav-item nav-item--active"><i data-lucide="layout-dashboard"></i><span>Tableau de bord</span></a>
+                <span class="sidebar__section-label">Modules</span>
+                <a href="pages/modules/module1/index.html" class="nav-item"><i data-lucide="book-open"></i><span>M1 — Fondamentaux</span></a>
+                <a href="pages/modules/module2/index.html" class="nav-item"><i data-lucide="users"></i><span>M2 — Clients</span></a>
+                <a href="pages/modules/module3/index.html" class="nav-item"><i data-lucide="truck"></i><span>M3 — Fournisseurs</span></a>
+                <a href="pages/modules/module4/index.html" class="nav-item"><i data-lucide="landmark"></i><span>M4 — Trésorerie</span></a>
+                <span class="sidebar__section-label" id="adminSectionLabel" style="display:none;">Administration</span>
+                <a href="pages/admin/index.html" class="nav-item" id="adminNavItem" style="display:none;"><i data-lucide="shield-check"></i><span>Gestion stagiaires</span></a>
+            </nav>
+            <div class="sidebar__footer">
+                <div class="sidebar__user">
+                    <div class="sidebar__avatar" id="userAvatar">?</div>
+                    <div class="sidebar__user-info">
+                        <div class="sidebar__user-name" id="userName">Chargement...</div>
+                        <div class="sidebar__user-role" id="userRole">—</div>
+                    </div>
+                    <button class="btn-icon btn-ghost" id="logoutBtn" aria-label="Déconnexion" title="Déconnexion"><i data-lucide="log-out"></i></button>
+                </div>
+            </div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <header class="topbar">
+            <div class="topbar__left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i data-lucide="menu"></i></button>
+                <h1 class="topbar__title">Tableau de bord</h1>
+            </div>
+            <div class="topbar__right">
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Changer de thème"><i data-lucide="sun"></i></button>
+            </div>
+        </header>
+        <main class="content" id="mainContent">
+            <div class="welcome-banner" id="welcomeBanner">
+                <div class="welcome-banner__content">
+                    <p class="welcome-banner__greeting" id="welcomeGreeting">Bienvenue</p>
+                    <h2 class="welcome-banner__message" id="welcomeMessage">Chargement...</h2>
+                    <p class="welcome-banner__sub">Votre parcours de formation comptable. Progressez à votre rythme, séquence par séquence.</p>
+                </div>
+            </div>
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-card animate-fade-up delay-1"><span class="stat-card__label">Modules</span><span class="stat-card__value">4</span></div>
+                <div class="stat-card animate-fade-up delay-2"><span class="stat-card__label">Séquences terminées</span><span class="stat-card__value" id="statCompleted">0 / 11</span></div>
+                <div class="stat-card animate-fade-up delay-3"><span class="stat-card__label">Progression globale</span><span class="stat-card__value" id="statProgress">0%</span></div>
+                <div class="stat-card animate-fade-up delay-4"><span class="stat-card__label">Durée totale</span><span class="stat-card__value">32h</span></div>
+            </div>
+            <div class="section-header"><h2 class="section-header__title">Vos modules</h2><span class="section-header__label">4 modules · 11 séquences</span></div>
+            <div class="modules-grid" id="modulesGrid">
+                <a href="pages/modules/module1/index.html" class="module-card animate-fade-up delay-2">
+                    <div class="module-card__icon"><i data-lucide="book-open"></i></div>
+                    <span class="module-card__number">MODULE 01</span>
+                    <h3 class="module-card__title">Les Fondamentaux de la Comptabilité</h3>
+                    <p class="module-card__desc">PCG, partie double, journaux, grand livre, balance, bilan et compte de résultat.</p>
+                    <div class="progress-bar"><div class="progress-bar__fill" style="width:0%"></div></div>
+                    <div class="module-card__meta"><span class="module-card__meta-item"><i data-lucide="clock"></i> 8h</span><span class="module-card__meta-item"><i data-lucide="layers"></i> 3 séquences</span></div>
+                </a>
+                <a href="pages/modules/module2/index.html" class="module-card animate-fade-up delay-3">
+                    <div class="module-card__icon"><i data-lucide="users"></i></div>
+                    <span class="module-card__number">MODULE 02</span>
+                    <h3 class="module-card__title">Gestion Clients (CP 1)</h3>
+                    <p class="module-card__desc">Factures, TVA collectée, lettrage, balance âgée, relances et rapprochement bancaire.</p>
+                    <div class="progress-bar"><div class="progress-bar__fill" style="width:0%"></div></div>
+                    <div class="module-card__meta"><span class="module-card__meta-item"><i data-lucide="clock"></i> 8h</span><span class="module-card__meta-item"><i data-lucide="layers"></i> 3 séquences</span></div>
+                </a>
+                <a href="pages/modules/module3/index.html" class="module-card animate-fade-up delay-4">
+                    <div class="module-card__icon"><i data-lucide="truck"></i></div>
+                    <span class="module-card__number">MODULE 03</span>
+                    <h3 class="module-card__title">Gestion Fournisseurs (CP 2)</h3>
+                    <p class="module-card__desc">Contrôle factures, TVA déductible, OCR, échéancier, avoirs et virements SEPA.</p>
+                    <div class="progress-bar"><div class="progress-bar__fill" style="width:0%"></div></div>
+                    <div class="module-card__meta"><span class="module-card__meta-item"><i data-lucide="clock"></i> 8h</span><span class="module-card__meta-item"><i data-lucide="layers"></i> 2 séquences</span></div>
+                </a>
+                <a href="pages/modules/module4/index.html" class="module-card animate-fade-up delay-5">
+                    <div class="module-card__icon"><i data-lucide="landmark"></i></div>
+                    <span class="module-card__number">MODULE 04</span>
+                    <h3 class="module-card__title">Opérations de Trésorerie (CP 3)</h3>
+                    <p class="module-card__desc">Encaissements, décaissements, rapprochement bancaire et prévision de trésorerie.</p>
+                    <div class="progress-bar"><div class="progress-bar__fill" style="width:0%"></div></div>
+                    <div class="module-card__meta"><span class="module-card__meta-item"><i data-lucide="clock"></i> 8h</span><span class="module-card__meta-item"><i data-lucide="layers"></i> 3 séquences</span></div>
+                </a>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="env.js"></script>
+    <script src="core/theme/theme.js"></script>
+    <script type="module" src="pages/auth/dashboard.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

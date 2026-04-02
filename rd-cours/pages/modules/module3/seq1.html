@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Séq. 1 — De la réception à l'enregistrement — RD COURS COMPTA</title><link rel="icon" type="image/svg+xml" href="../../../assets/icons/icon.svg"><script src="https://unpkg.com/lucide@latest"></script><link rel="stylesheet" href="../../../css/main.css"></head>
+<body><div class="app-shell"><aside class="sidebar" id="sidebar"><div class="sidebar__header"><img src="../../../assets/images/logo.svg" alt="" class="sidebar__logo" /><div class="sidebar__brand">RD COURS<br><small>RD FORMATION COMPTABILITE</small></div></div><nav class="sidebar__nav"><span class="sidebar__section-label">Navigation</span><a href="../../../dashboard.html" class="nav-item"><i data-lucide="layout-dashboard"></i><span>Tableau de bord</span></a><span class="sidebar__section-label">Modules</span><a href="../../../pages/modules/module1/index.html" class="nav-item"><i data-lucide="book-open"></i><span>M1 — Fondamentaux</span></a><a href="../../../pages/modules/module2/index.html" class="nav-item"><i data-lucide="users"></i><span>M2 — Clients</span></a><a href="../../../pages/modules/module3/index.html" class="nav-item nav-item--active"><i data-lucide="truck"></i><span>M3 — Fournisseurs</span></a><a href="../../../pages/modules/module4/index.html" class="nav-item"><i data-lucide="landmark"></i><span>M4 — Trésorerie</span></a><span class="sidebar__section-label" id="adminSectionLabel" style="display:none;">Administration</span><a href="../../../pages/admin/index.html" class="nav-item" id="adminNavItem" style="display:none;"><i data-lucide="shield-check"></i><span>Gestion stagiaires</span></a></nav><div class="sidebar__footer"><div class="sidebar__user"><div class="sidebar__avatar" id="userAvatar">?</div><div class="sidebar__user-info"><div class="sidebar__user-name" id="userName">...</div><div class="sidebar__user-role" id="userRole">—</div></div><button class="btn-icon btn-ghost" id="logoutBtn" aria-label="Déconnexion"><i data-lucide="log-out"></i></button></div></div></aside><div class="sidebar-overlay" id="sidebarOverlay"></div><header class="topbar"><div class="topbar__left"><button class="menu-toggle" id="menuToggle" aria-label="Menu"><i data-lucide="menu"></i></button><nav class="topbar__breadcrumb"><a href="../../../dashboard.html">Accueil</a><span class="topbar__breadcrumb-sep"><i data-lucide="chevron-right" style="width:14px;height:14px;"></i></span><a href="index.html">Module 3</a><span class="topbar__breadcrumb-sep"><i data-lucide="chevron-right" style="width:14px;height:14px;"></i></span><span class="topbar__breadcrumb-current">Séquence 1</span></nav></div><div class="topbar__right"><button type="button" class="theme-toggle" id="themeToggle" aria-label="Changer de thème"><i data-lucide="sun"></i></button></div></header>
+<main class="content"><div class="module-header animate-fade-up"><div class="module-header__top"><span class="module-header__badge">MODULE 03 · SÉQUENCE 1</span><span class="module-header__duration"><i data-lucide="scan-line"></i> De la réception à l'enregistrement</span></div><h1 class="module-header__title">De la réception à l'enregistrement</h1></div>
+<div class="course-body">
+<div class="course-accordion">
+
+  <div class="accordion-section open animate-fade-up" data-section="section-01" id="section-01">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="accordion-header__icon accordion-header__icon--primary"><i data-lucide="book-open"></i></div>
+      <div class="accordion-header__text">
+        <div class="accordion-header__title">Le processus de réception et de contrôle</div>
+        <div class="accordion-header__subtitle">Section 01</div>
+      </div>
+      <div class="accordion-header__status accordion-header__status--pending" data-status="section-01">
+        <i data-lucide="circle"></i> À faire
+      </div>
+      <div class="accordion-header__toggle"><i data-lucide="chevron-down"></i></div>
+    </div>
+    <div class="accordion-body">
+      <div class="reac-block"><div class="reac-block__title"><i data-lucide="bookmark"></i> Lien avec le REAC</div><div class="reac-block__text">Compétence 2 (page 21) : « effectuer un contrôle de cohérence et de réalité entre les documents initiaux et la facture, enregistrer en comptabilité la facture ». Critères : « conditions contractuelles respectées, enregistrements exacts ».</div></div>
+<div class="key-concept"><div class="key-concept__title"><i data-lucide="lightbulb"></i> TVA récupérable (44566)</div><div class="key-concept__text">La TVA sur achats est enregistrée au <strong>débit du 44566</strong>. Elle sera déduite de la TVA collectée lors de la déclaration. <strong>Exception</strong> : taxi, restaurant, véhicule de tourisme → TVA non récupérable.</div></div>
+<table class="acct-table"><thead><tr><th>Compte</th><th>Libellé</th></tr></thead><tbody><tr><td>606</td><td>Achats non stockés (fournitures, petit équipement)</td></tr><tr><td>607</td><td>Achats de marchandises (revente)</td></tr><tr><td>61</td><td>Services extérieurs (entretien, sous-traitance, loyers)</td></tr><tr><td>62</td><td>Autres services extérieurs (honoraires, déplacements)</td></tr><tr><td>64</td><td>Charges de personnel</td></tr><tr><td>627</td><td>Services bancaires</td></tr></tbody></table>
+      <div class="section-complete-bar">
+        <button class="btn-section-complete" data-section="section-01" onclick="markSectionComplete(this)">
+          <i data-lucide="check-circle"></i> Marquer comme terminé
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-section animate-fade-up" data-section="section-02" id="section-02">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="accordion-header__icon accordion-header__icon--cta"><i data-lucide="scale"></i></div>
+      <div class="accordion-header__text">
+        <div class="accordion-header__title">Trois exemples détaillés</div>
+        <div class="accordion-header__subtitle">Section 02</div>
+      </div>
+      <div class="accordion-header__status accordion-header__status--pending" data-status="section-02">
+        <i data-lucide="circle"></i> À faire
+      </div>
+      <div class="accordion-header__toggle"><i data-lucide="chevron-down"></i></div>
+    </div>
+    <div class="accordion-body">
+      <h3 class="course-subsection"><i data-lucide="receipt"></i> Exemple 1 : Achat de marchandises avec bon de commande</h3>
+<div class="facture-block"><div class="facture-block__header"><i data-lucide="file-text"></i> Facture N° FP-456</div><strong>Fournitures Pro</strong> — 12 rue du Commerce — 75002 Paris<br><strong>FACTURE N° FP-456</strong> — BC : BC123 — Date : 03/04/2026<br>50 × Article X à 20 € HT — HT : <strong>1 000,00 €</strong> — TVA 20 % : 200,00 € — <span class='amount'>TTC : 1 200,00 €</span></div>
+<p><strong>Contrôle :</strong> Vérifier quantité (50) et prix unitaire (20 €) vs bon de commande. Calcul : 50 × 20 = 1 000 HT. OK.</p>
+<table class="acct-table"><thead><tr><th>Compte</th><th>Libellé</th><th>Débit</th><th>Crédit</th></tr></thead><tbody><tr><td class="acct-code">607</td><td>Achats de marchandises</td><td class=debit>1 000,00</td><td></td></tr><tr><td class="acct-code">44566</td><td>TVA déductible</td><td class=debit>200,00</td><td></td></tr><tr><td class="acct-code">401</td><td>Fournisseur Fournitures Pro</td><td></td><td class=credit>1 200,00</td></tr></tbody></table>
+
+<h3 class="course-subsection"><i data-lucide="receipt"></i> Exemple 2 : Facture d'électricité</h3>
+<table class="acct-table"><thead><tr><th>Compte</th><th>Libellé</th><th>Débit</th><th>Crédit</th></tr></thead><tbody><tr><td class="acct-code">61</td><td>Services extérieurs (6061)</td><td class=debit>450,00</td><td></td></tr><tr><td class="acct-code">44566</td><td>TVA déductible</td><td class=debit>90,00</td><td></td></tr><tr><td class="acct-code">401</td><td>Fournisseur EDF</td><td></td><td class=credit>540,00</td></tr></tbody></table>
+
+<h3 class="course-subsection"><i data-lucide="receipt"></i> Exemple 3 : Note de frais taxi (TVA non récupérable)</h3>
+<p>35,00 € TTC. La TVA sur taxi n'est <strong>pas récupérable</strong> → montant TTC en charge directement.</p>
+<table class="acct-table"><thead><tr><th>Compte</th><th>Libellé</th><th>Débit</th><th>Crédit</th></tr></thead><tbody><tr><td class="acct-code">6251</td><td>Déplacements (taxi)</td><td class=debit>35,00</td><td></td></tr><tr><td class="acct-code">401</td><td>Fournisseur (collaborateur)</td><td></td><td class=credit>35,00</td></tr></tbody></table>
+
+<table class="resources-table"><thead><tr><th>Document</th><th>Type</th><th>Téléchargement</th></tr></thead><tbody><tr><td>Facture FP-456 — Marchandises</td><td>PDF</td><td><a href="#" class="dl-btn" target="_blank"><i data-lucide="download"></i> Télécharger</a></td></tr><tr><td>Facture EDF — Électricité</td><td>PDF</td><td><a href="#" class="dl-btn" target="_blank"><i data-lucide="download"></i> Télécharger</a></td></tr><tr><td>Note de frais taxi</td><td>PDF</td><td><a href="#" class="dl-btn" target="_blank"><i data-lucide="download"></i> Télécharger</a></td></tr></tbody></table>
+      <div class="section-complete-bar">
+        <button class="btn-section-complete" data-section="section-02" onclick="markSectionComplete(this)">
+          <i data-lucide="check-circle"></i> Marquer comme terminé
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-section animate-fade-up" data-section="section-03" id="section-03">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="accordion-header__icon accordion-header__icon--secondary"><i data-lucide="notebook-pen"></i></div>
+      <div class="accordion-header__text">
+        <div class="accordion-header__title">Application pratique sur Pennylane</div>
+        <div class="accordion-header__subtitle">Section 03</div>
+      </div>
+      <div class="accordion-header__status accordion-header__status--pending" data-status="section-03">
+        <i data-lucide="circle"></i> À faire
+      </div>
+      <div class="accordion-header__toggle"><i data-lucide="chevron-down"></i></div>
+    </div>
+    <div class="accordion-body">
+      <div class="practice-step"><div class="practice-step__num">1</div><div class="practice-step__text">Importez un <strong>PDF facture fournisseur</strong>. L'OCR de Pennylane extrait date, fournisseur, montants.</div></div>
+<div class="practice-step"><div class="practice-step__num">2</div><div class="practice-step__text"><strong>Contrôlez</strong> chaque champ : fournisseur, montant HT, taux TVA, total TTC.</div></div>
+<div class="practice-step"><div class="practice-step__num">3</div><div class="practice-step__text">Validez. Pennylane enregistre dans le <strong>journal ACH</strong>.</div></div>
+<div class="practice-step"><div class="practice-step__num">4</div><div class="practice-step__text">Cliquez <strong>« Voir l'écriture »</strong> : débit charge + 44566, crédit 401.</div></div>
+<div class="practice-step"><div class="practice-step__num">5</div><div class="practice-step__text">Pour un taxi, choisissez le compte <strong>6251</strong> et renseignez le montant TTC (TVA non récupérable).</div></div>
+
+<div class="training-block"><div class="training-block__title"><i data-lucide="dumbbell"></i> Pour s'entraîner</div><ul><li>Créez trois fournisseurs fictifs dans Pennylane.</li><li>Importez des factures PDF (factices).</li><li>Simulez des erreurs (mauvais taux TVA) et corrigez-les.</li><li>Après validation, vérifiez le grand livre du fournisseur.</li></ul></div>
+      <div class="section-complete-bar">
+        <button class="btn-section-complete" data-section="section-03" onclick="markSectionComplete(this)">
+          <i data-lucide="check-circle"></i> Marquer comme terminé
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Progression de la séquence -->
+<div class="sequence-progress-bar" id="seqProgressBar">
+  <span class="sequence-progress-bar__label">Progression :</span>
+  <div class="progress-bar" style="flex:1;"><div class="progress-bar__fill progress-bar__fill--cta" id="seqProgressFill" style="width:0%;"></div></div>
+  <span class="sequence-progress-bar__count" id="seqProgressCount">0 / 3 sections</span>
+</div>
+
+<!-- Quiz de validation -->
+<div class="quiz-wrapper" id="quizWrapper">
+  <div class="quiz-wrapper__header">
+    <div class="quiz-wrapper__icon"><i data-lucide="help-circle"></i></div>
+    <div>
+      <div class="quiz-wrapper__title">Quiz de validation</div>
+      <div class="quiz-wrapper__subtitle">Répondez aux questions pour valider cette séquence (minimum 70%)</div>
+    </div>
+  </div>
+  <div id="quizContainer">
+    <div class="quiz-loading"><i data-lucide="loader" style="width:24px;height:24px;animation:spin 1s linear infinite;"></i><br>Chargement du quiz...</div>
+  </div>
+  <div class="quiz-footer" id="quizFooter" style="display:none;">
+    <div>
+      <span class="quiz-score__label">Score</span>
+      <span class="quiz-score" id="quizScore">—</span>
+    </div>
+    <button class="btn btn-cta" id="quizSubmitBtn" onclick="submitQuiz()" disabled>Valider mes réponses</button>
+  </div>
+</div>
+
+</div>
+<div class="sequence-nav"><div></div><a href="seq2.html" class="sequence-nav__btn sequence-nav__btn--primary">Suivi des dettes <i data-lucide="arrow-right"></i></a></div></main></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="../../../env.js"></script><script src="../../../core/theme/theme.js"></script><script type="module" src="module.js"></script><script>lucide.createIcons();</script>
+<script>
+  // ═══ Accordion Toggle ═══
+  function toggleAccordion(header) {
+    header.closest('.accordion-section').classList.toggle('open');
+  }
+
+  // ═══ Section Completion ═══
+  const TOTAL_SECTIONS = 3;
+  const SEQ_CODE = 'SEQ3_1';
+  let completedSections = new Set();
+
+  // Load from localStorage
+  try {
+    const saved = JSON.parse(localStorage.getItem('rd-sections-' + SEQ_CODE) || '[]');
+    saved.forEach(s => completedSections.add(s));
+    completedSections.forEach(s => {
+      const btn = document.querySelector(`.btn-section-complete[data-section="${s}"]`);
+      if (btn) { btn.classList.add('completed'); btn.innerHTML = '<i data-lucide="check-circle"></i> Terminé'; }
+      const status = document.querySelector(`.accordion-header__status[data-status="${s}"]`);
+      if (status) { status.className = 'accordion-header__status accordion-header__status--done'; status.innerHTML = '<i data-lucide="check-circle"></i> Terminé'; }
+    });
+    updateProgress();
+  } catch(e) {}
+
+  function markSectionComplete(btn) {
+    const sectionId = btn.dataset.section;
+    if (completedSections.has(sectionId)) return;
+    completedSections.add(sectionId);
+    btn.classList.add('completed');
+    btn.innerHTML = '<i data-lucide="check-circle"></i> Terminé';
+    const status = document.querySelector(`.accordion-header__status[data-status="${sectionId}"]`);
+    if (status) { status.className = 'accordion-header__status accordion-header__status--done'; status.innerHTML = '<i data-lucide="check-circle"></i> Terminé'; }
+    localStorage.setItem('rd-sections-' + SEQ_CODE, JSON.stringify([...completedSections]));
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const done = completedSections.size;
+    const pct = Math.round((done / TOTAL_SECTIONS) * 100);
+    const fill = document.getElementById('seqProgressFill');
+    const count = document.getElementById('seqProgressCount');
+    if (fill) fill.style.width = pct + '%';
+    if (count) count.textContent = done + ' / ' + TOTAL_SECTIONS + ' sections';
+  }
+
+  // ═══ Quiz (loaded from Supabase) ═══
+  let quizQuestions = [];
+  let userAnswers = {};
+
+  async function loadQuiz() {
+    const container = document.getElementById('quizContainer');
+    const footer = document.getElementById('quizFooter');
+    
+    if (!window._supabase) {
+      container.innerHTML = '<div class="quiz-empty">Connexion Supabase non disponible.</div>';
+      console.error('[Quiz] window._supabase is null');
+      return;
+    }
+    
+    console.log('[Quiz] Loading quiz for', SEQ_CODE);
+    
+    try {
+      // Get sequence ID from Supabase using the SEQ_CODE
+      const { data: seqData, error: seqError } = await window._supabase
+        .from('tb_cours_sequences')
+        .select('id')
+        .eq('code', SEQ_CODE)
+        .maybeSingle();
+      
+      if (seqError) { 
+        console.error('[Quiz] Sequence lookup error:', seqError);
+        container.innerHTML = '<div class="quiz-empty">Erreur lors du chargement. Vérifiez que le schéma SQL a été exécuté.</div>';
+        return; 
+      }
+      
+      if (!seqData) { 
+        console.warn('[Quiz] No sequence found for code:', SEQ_CODE);
+        container.innerHTML = '<div class="quiz-empty">Séquence introuvable en base. Exécutez le fichier supabase-schema.sql.</div>'; 
+        return; 
+      }
+      
+      console.log('[Quiz] Sequence ID:', seqData.id, '— fetching questions...');
+      
+      const { data: questions, error: quizError } = await window._supabase
+        .from('tb_cours_quiz')
+        .select('*')
+        .eq('sequence_id', seqData.id)
+        .order('ordre');
+
+      if (quizError) {
+        console.error('[Quiz] Quiz fetch error:', quizError);
+        container.innerHTML = '<div class="quiz-empty">Erreur lors du chargement des questions.</div>';
+        return;
+      }
+      
+      console.log('[Quiz] Questions loaded:', questions?.length || 0);
+      
+      if (!questions || questions.length === 0) {
+        container.innerHTML = '<div class="quiz-empty"><i data-lucide="info" style="width:24px;height:24px;margin-bottom:8px;opacity:0.5;display:block;margin:0 auto 8px;"></i>Aucun quiz disponible pour le moment.<br><span style="font-size:0.75rem;color:var(--text-muted);">Le formateur ajoutera les questions prochainement.</span></div>';
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        return;
+      }
+      
+      quizQuestions = questions;
+      renderQuiz(questions);
+      footer.style.display = 'flex';
+    } catch(e) {
+      console.error('[Quiz] Unexpected error:', e);
+      container.innerHTML = '<div class="quiz-empty">Erreur inattendue : ' + (e.message || e) + '</div>';
+    }
+  }
+
+  function renderQuiz(questions) {
+    const container = document.getElementById('quizContainer');
+    const letters = ['A', 'B', 'C', 'D', 'E'];
+    container.innerHTML = questions.map((q, qi) => {
+      const options = JSON.parse(typeof q.options === 'string' ? q.options : JSON.stringify(q.options));
+      return `
+        <div class="quiz-question" data-qid="${q.id}">
+          <div class="quiz-question__num">Question ${qi + 1} / ${questions.length}</div>
+          <div class="quiz-question__text">${q.question}</div>
+          <div class="quiz-options">
+            ${options.map((opt, oi) => `
+              <div class="quiz-option" data-qid="${q.id}" data-oidx="${oi}" onclick="selectQuizOption(this)">
+                <div class="quiz-option__marker">${letters[oi]}</div>
+                <span>${opt}</span>
+              </div>
+            `).join('')}
+          </div>
+          <div class="quiz-explanation" id="expl-${q.id}">${q.explication || ''}</div>
+        </div>
+      `;
+    }).join('');
+
+    document.getElementById('quizSubmitBtn').disabled = true;
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  }
+
+  function selectQuizOption(el) {
+    const qid = el.dataset.qid;
+    const oidx = parseInt(el.dataset.oidx);
+    
+    // Deselect others in same question
+    el.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    userAnswers[qid] = oidx;
+
+    // Enable submit if all answered
+    if (Object.keys(userAnswers).length === quizQuestions.length) {
+      document.getElementById('quizSubmitBtn').disabled = false;
+    }
+  }
+
+  function submitQuiz() {
+    let correct = 0;
+    quizQuestions.forEach(q => {
+      const answer = userAnswers[q.id];
+      const isCorrect = answer === q.reponse_correcte;
+      if (isCorrect) correct++;
+
+      // Show feedback
+      const qEl = document.querySelector(`.quiz-question[data-qid="${q.id}"]`);
+      qEl.querySelectorAll('.quiz-option').forEach((o, i) => {
+        o.classList.add('disabled');
+        if (i === q.reponse_correcte) o.classList.add('correct');
+        if (i === answer && !isCorrect) o.classList.add('wrong');
+      });
+      
+      // Show explanation
+      const expl = document.getElementById('expl-' + q.id);
+      if (expl && expl.textContent.trim()) expl.classList.add('visible');
+    });
+
+    const score = Math.round((correct / quizQuestions.length) * 100);
+    const scoreEl = document.getElementById('quizScore');
+    scoreEl.textContent = score + '% (' + correct + '/' + quizQuestions.length + ')';
+    scoreEl.className = 'quiz-score ' + (score >= 70 ? 'quiz-score--pass' : 'quiz-score--fail');
+
+    document.getElementById('quizSubmitBtn').disabled = true;
+    document.getElementById('quizSubmitBtn').textContent = score >= 70 ? 'Séquence validée !' : 'Score insuffisant (min. 70%)';
+
+    // Save to Supabase progression
+    saveProgression(score);
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  }
+
+  async function saveProgression(score) {
+    try {
+      const { data: { session } } = await window._supabase.auth.getSession();
+      if (!session) return;
+      const { data: profile } = await window._supabase.from('tb_cours_users').select('id').eq('auth_id', session.user.id).single();
+      if (!profile) return;
+      const { data: seqData } = await window._supabase.from('tb_cours_sequences').select('id').eq('code', SEQ_CODE).single();
+      if (!seqData) return;
+
+      const statut = score >= 70 ? 'valide' : 'termine';
+      await window._supabase.from('tb_cours_progression').upsert({
+        user_id: profile.id,
+        sequence_id: seqData.id,
+        statut: statut,
+        score: score,
+        date_fin: new Date().toISOString()
+      }, { onConflict: 'user_id,sequence_id' });
+    } catch(e) { console.error('Save progression error:', e); }
+  }
+
+  // Init: load quiz — wait for Supabase CDN + env.js
+  let _initAttempts = 0;
+  function initQuiz() {
+    _initAttempts++;
+    console.log('[Quiz] Init attempt', _initAttempts, '— supabase:', typeof supabase, '— ENV:', typeof ENV);
+    
+    if (typeof supabase !== 'undefined' && typeof ENV !== 'undefined') {
+      try {
+        window._supabase = supabase.createClient(ENV.SUPABASE_URL, ENV.SUPABASE_ANON_KEY);
+        console.log('[Quiz] Supabase client created, loading quiz...');
+        loadQuiz();
+      } catch(e) {
+        console.error('[Quiz] Failed to create Supabase client:', e);
+        document.getElementById('quizContainer').innerHTML = '<div class="quiz-empty">Erreur de configuration Supabase. Vérifiez env.js.</div>';
+      }
+    } else if (_initAttempts < 25) {
+      setTimeout(initQuiz, 300);
+    } else {
+      console.error('[Quiz] Gave up after', _initAttempts, 'attempts. supabase:', typeof supabase, 'ENV:', typeof ENV);
+      document.getElementById('quizContainer').innerHTML = '<div class="quiz-empty">Impossible de se connecter à Supabase. Vérifiez que env.js est configuré et que le CDN Supabase est accessible.</div>';
+    }
+  }
+  
+  // Start: try immediately, then on load, then with retries
+  if (document.readyState === 'complete') {
+    initQuiz();
+  } else {
+    window.addEventListener('load', initQuiz);
+  }
+</script>
+
+</body></html>
